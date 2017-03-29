@@ -20,9 +20,6 @@ class SearchBar extends Component {
         event.preventDefault();
         this.props.fetchWeather(this.state.term);
         this.setState({term:''});
-
-
-        //go and fetch weather data
     }
 
     render() {
@@ -31,7 +28,7 @@ class SearchBar extends Component {
                 <form onSubmit={this.onFormSubmit} className="input-group" action="">
                     <input
                         className="form-control"
-                        placeholder="Get a five day forecast in your favourite city"
+                        placeholder="Get a five day forecast for your favourite city"
                         onChange={this.onInputChange}
                         value={this.state.term}
                     />
